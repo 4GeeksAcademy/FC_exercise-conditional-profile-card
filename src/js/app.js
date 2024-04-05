@@ -7,7 +7,7 @@ import "../style/index.css";
     {
         includeCover: true, // if includeCover is true the algorithm should show the cover image
         background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da", // this is the image's url that will be used as a background for the profile cover
-        avatarURL: "https://randomuser.me/api/portraits/women/42.jpg", // this is the url for the profile avatar
+        avatarURL: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600", // this is the url for the profile avatar
         socialMediaPosition: "right", // social media bar position (left or right)
         
         twitter: null, // social media usernames
@@ -33,9 +33,8 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h1>Anna Silva</h1>
+          <h3>Miami Shores, USA</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
@@ -49,14 +48,17 @@ function render(variables = {}) {
 /**
  * Don't change any of the lines below, here is where we do the logic for the dropdowns
  */
+
 window.onload = function() {
   window.variables = {
-    // if includeCover is true the algorithm should show the cover image
+    // if includeCover is true the algorithm should
     includeCover: true,
-    // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    // this is the url of the image that will used as background for the profile cover
+    background:
+      "https://images.pexels.com/photos/2389349/pexels-photo-2389349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
@@ -65,12 +67,12 @@ window.onload = function() {
     linkedin: null,
     instagram: null,
     name: null,
-    lastName: null,
+    lastname: null,
     role: null,
     country: null,
     city: null
   };
-  render(window.variables); // render the card for the first time
+  render(window.variables); //render the card for the first time
 
   document.querySelectorAll(".picker").forEach(function(elm) {
     elm.addEventListener("change", function(e) {
@@ -85,7 +87,7 @@ window.onload = function() {
           : this.value == "false"
           ? false
           : this.value;
-      render(Object.assign(window.variables, values)); // render again the card with new values
+      render(Object.assign(window.variables, values)); // render again the card with new valus
     });
   });
 };
