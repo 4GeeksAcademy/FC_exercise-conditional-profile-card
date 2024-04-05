@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-    <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
-    <script
-      src="https://kit.fontawesome.com/072e5df971.js"
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
-    ></script>
+    />
+    <link rel="shortcut icon" href="./assets/img/4geeks.ico" />
   </head>
 
   <body>
@@ -27,13 +29,14 @@
       </li>
       <li>
         <label>Last Name</label>
-        <input class="picker" for="lastName" type="text" />
+        <input class="picker" for="lastname" type="text" />
       </li>
       <li>
         <label>S.M. Position</label>
         <select class="picker" for="socialMediaPosition">
-          <option value="position-left">Left</option>
+          <option value="">null</option>
           <option value="position-right">Right</option>
+          <option value="position-left">Left</option>
         </select>
       </li>
       <li>
@@ -66,9 +69,9 @@
         <select class="picker" for="city">
           <option value="">null</option>
           <option value="Miami">Miami</option>
-          <option value="London">Munich</option>
-          <option value="Brazil">Caracas</option>
-          <option value="Finland">Toronto</option>
+          <option value="Munich">Munich</option>
+          <option value="Caracas">Caracas</option>
+          <option value="Toronto">Toronto</option>
         </select>
       </li>
       <li>
@@ -78,13 +81,13 @@
           <option value="USA">USA</option>
           <option value="Germany">Germany</option>
           <option value="Canada">Canada</option>
-          <option value="Brazil">Venezuela</option>
+          <option value="Venezuela">Venezuela</option>
         </select>
       </li>
     </ul>
     <div id="widget_content"></div>
 
     <!-- do not remove this bundle.js tag -->
-    <script type="text/javascript" src="/main.bundle.js"></script>
+    <script type="text/javascript" src="./bundle.js"></script>
   </body>
 </html>
